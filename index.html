@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cTrader Mobile Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="plugin-container">
+        <!-- Header & Account Metrics -->
+        <header>
+            <h3>Account Terminal</h3>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <span class="label">Balance</span>
+                    <span id="balance-display" class="value">$0.00</span>
+                </div>
+                <div class="metric-card">
+                    <span class="label">Active Positions</span>
+                    <span id="positions-count" class="value">0</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Command Terminal Input Box -->
+        <section class="terminal-section">
+            <label for="terminal-input">Command Console</label>
+            <div class="input-row">
+                <input type="text" id="terminal-input" placeholder="e.g., buy 0.1, closeall..." />
+                <button id="execute-btn">Run</button>
+            </div>
+        </section>
+
+        <!-- Live Streaming Log -->
+        <section class="log-section">
+            <label>Activity Tracker</label>
+            <div id="activity-log" class="log-window">
+                <div class="log-entry system">System initialized. Waiting for cTrader...</div>
+            </div>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
